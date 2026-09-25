@@ -1,58 +1,59 @@
-import { ProductCard } from "./ProductCard";
+import prestamosIcon from "../../../assets/icons/prestamos.svg"
+import divisasIcon from "../../../assets/icons/divisas.svg"
+import inversionesIcon from "../../../assets/icons/inversiones.svg"
+import nominaIcon from "../../../assets/icons/nomina.svg"
+import remesasIcon from "../../../assets/icons/remesas.svg"
+import cuentasIcon from "../../../assets/icons/cuentas.svg"
 
-const products = [
-  {
-    title: "Cuentas",
-    description:
-      "Encuentra una cuenta que se adapte a tus necesidades y administra tu dinero de manera sencilla.",
-  },
-  {
-    title: "Tarjetas",
-    description:
-      "Conoce nuestras opciones de tarjetas y descubre los beneficios disponibles para ti.",
-  },
-  {
-    title: "Préstamos",
-    description:
-      "Opciones de financiamiento para diferentes necesidades y proyectos.",
-  },
-  {
-    title: "Inversiones",
-    description:
-      "Alternativas para hacer crecer tu dinero de acuerdo con tus objetivos.",
-  },
-];
-
+import tpremia from "../../../assets/tpremia-desktop.webp"
 export function Products() {
   return (
-    <section className="bg-white py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Header */}
-        <div className="max-w-2xl">
-          <span className="text-sm font-semibold uppercase tracking-wide text-red-600">
-            Productos
-          </span>
-
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
-            Encuentra lo que necesitas
-          </h2>
-
-          <p className="mt-4 text-lg leading-8 text-neutral-600">
-            Conoce las diferentes opciones financieras disponibles.
-          </p>
+    <div className="w-full flex flex-col px-32  pt-32">
+      <div className="w-full flex flex-col items-center gap-2">
+        <h1 className="text-[25px] font-bold">Tus planes necesitan un gran inicio.</h1>
+        <p className="text-gray-500">Permitenos ser la opcion que te acompañe en la construccion de tus sueños.</p>
+      </div>
+      <div className="flex justify-between items-start rounded-md shadow-lg w-full px-24 py-10 mt-6">
+        <div className="flex flex-col gap-3 items-center w-24">
+          <div className="w-12 h-12 flex items-center justify-center">
+            <img src={prestamosIcon} alt="" className="max-w-full max-h-full object-contain" />
+          </div>
+          <p className="text-[15px] font-bold text-[#17a54d] text-center h-5">PRESTAMOS</p>
         </div>
-
-        {/* Grid */}
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {products.map((product) => (
-            <ProductCard
-              key={product.title}
-              title={product.title}
-              description={product.description}
-            />
-          ))}
+        <div className="flex flex-col gap-3 items-center w-24">
+          <div className="w-12 h-12 flex items-center justify-center">
+            <img src={cuentasIcon} alt="" className="max-w-full max-h-full object-contain" />
+          </div>
+          <p className="text-[15px] font-bold text-[#17a54d] text-center h-5">CUENTAS</p>
+        </div>
+        <div className="flex flex-col gap-3 items-center w-24">
+          <div className="w-12 h-12 flex items-center justify-center">
+            <img src={nominaIcon} alt="" className="max-w-full max-h-full object-contain" />
+          </div>
+          <p className="text-[15px] font-bold text-[#17a54d] text-center h-5">MI NOMINA</p>
+        </div>
+        <div className="flex flex-col gap-3 items-center w-24">
+          <div className="w-12 h-12 flex items-center justify-center">
+            <img src={divisasIcon} alt="" className="max-w-full max-h-full object-contain" />
+          </div>
+          <p className="text-[15px] font-bold text-[#17a54d] text-center h-5">DIVISAS</p>
+        </div>
+        <div className="flex flex-col gap-3 items-center w-24">
+          <div className="w-12 h-12 flex items-center justify-center">
+            <img src={remesasIcon} alt="" className="max-w-full max-h-full object-contain" />
+          </div>
+          <p className="text-[15px] font-bold text-[#17a54d] text-center h-5">REMESAS</p>
+        </div>
+        <div className="flex flex-col gap-3 items-center w-24">
+          <div className="w-12 h-12 flex items-center justify-center">
+            <img src={inversionesIcon} alt="" className="max-w-full max-h-full object-contain" />
+          </div>
+          <p className="text-[15px] font-bold text-[#17a54d] text-center h-5">INVERSIONES</p>
         </div>
       </div>
-    </section>
+      <div className="flex justify-between items-start rounded-md  mt-6">
+        <img src={tpremia} className="w-full h-auto" alt="" />
+      </div>
+    </div>
   );
 }

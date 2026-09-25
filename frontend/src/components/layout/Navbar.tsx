@@ -5,11 +5,11 @@ import { Plus } from "lucide-react";
 
 export function Navbar() {
   return (
-    <div className="w-full flex flex-col">
-        <div className="w-full flex items-center justify-between px-12 py-6">
+    <div className="sticky top-0 z-50 w-full flex flex-col bg-white shadow-sm">
+        <div className="w-full flex items-center justify-between px-12 py-3">
           
           <img className="w-72 h-auto" src={navLogo} alt="" />
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-2 items-center pr-6">
             <div>
               <button className="bg-[#17a54d] rounded-[70px] font-bold text-white text-xs px-4 py-1">PIDE TU PRESTAMO</button>
             </div>
@@ -25,9 +25,9 @@ export function Navbar() {
 
         </div>
 
-        <div className="w-full flex items-center justify-center bg-[#17a54d] py-6 gap-8">
-          <h1 className="font-bold text-white">PERSONAS</h1>
-          <h1 className="font-bold text-white">EMPRESAS</h1>
+        <div className="w-full flex items-center justify-center bg-[#17a54d] py-4 gap-8">
+          <h1 className="font-bold text-white text-[19px]">PERSONAS</h1>
+          <h1 className="font-bold text-white text-[19px]">EMPRESAS</h1>
         </div>
     </div>
   );
