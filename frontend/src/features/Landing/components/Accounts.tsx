@@ -4,8 +4,8 @@ import woman2Image from "../../../assets/GSF-home.webp"
 
 export function Accounts() {
     return(
-        <div className="flex flex-col items-center w-full mt-6 px-6">
-            <p className="text-[22px] font-bold text-center">Ya visualizaste tus sueños. Déjanos impulsarlos.</p>
+        <div className="flex flex-col items-center w-full mt-6 px-4 lg:px-6">
+            <p className="text-[18px] lg:text-[22px] font-bold text-center">Ya visualizaste tus sueños. Déjanos impulsarlos.</p>
 
             <div className="grid w-full max-w-[1100px] grid-cols-1 lg:grid-cols-[46%_1fr] gap-5 mt-10">
 

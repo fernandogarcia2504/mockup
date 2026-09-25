@@ -7,10 +7,10 @@ import compra from "../../../assets/icons/compra.svg"
 
 export default function Mobile () {
     return (
-        <div className="w-full grid grid-cols-1 lg:grid-cols-[38%_1fr] items-center gap-8 mt-16 pr-6 lg:pr-24">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-[38%_1fr] items-center gap-8 mt-12 lg:mt-16 pr-0 lg:pr-24">
 
-            <div className="relative h-[300px] lg:h-[360px]">
-                <div className="absolute left-0 right-0 top-[8%] bottom-[6%] rounded-r-full bg-[linear-gradient(200deg,#5fae7c_0%,#3f8f5f_45%,#2a6a4a_100%)]"></div>
+            <div className="relative h-[260px] sm:h-[300px] lg:h-[360px] overflow-hidden lg:overflow-visible">
+                <div className="absolute left-0 right-[12%] lg:right-0 top-[8%] bottom-[6%] rounded-r-full bg-[linear-gradient(200deg,#5fae7c_0%,#3f8f5f_45%,#2a6a4a_100%)]"></div>
                 <img
                     src={phone}
                     alt="App Banco Azteca pago con QR"
@@ -19,7 +19,7 @@ export default function Mobile () {
             </div>
 
             <div className="flex flex-col px-6 lg:px-0 ">
-                <h2 className="text-[22px] font-bold text-neutral-800">Con la App de Banco Azteca la vida es más sencilla:</h2>
+                <h2 className="text-[19px] lg:text-[22px] font-bold text-neutral-800">Con la App de Banco Azteca la vida es más sencilla:</h2>
                 <p className="mt-3 text-[15px] text-neutral-700">todas tus operaciones bancarias están disponibles siempre.</p>
 
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-8 max-w-[560px] self-center">

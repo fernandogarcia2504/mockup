@@ -10,8 +10,8 @@ export function Footer() {
 
       {/* ===== Parte oscura (la que ya tenías) ===== */}
       <div className="w-full bg-[#2e3032] flex flex-col items-center py-8 text-white">
-        <p className="text-[20px] mb-4">¿Necesitas información personalizada?</p>
-        <div className="flex gap-72 w-full items-center justify-center">
+        <p className="text-[18px] lg:text-[20px] mb-4 text-center px-4">¿Necesitas información personalizada?</p>
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-72 w-full items-center justify-center">
           <div className="flex flex-col gap-3 items-center">
             <p className="font-bold text-[15px]">Unidad Especializada</p>
             <p className="underline">55 1720 7272</p>
@@ -30,7 +30,76 @@ export function Footer() {
       {/* ===== Parte clara ===== */}
       <div className="w-full bg-[#f1f2f4] text-[#2e3032]">
 
-        <div className="flex w-full">
+        {/* ===== Links en móvil (acordeón) ===== */}
+        <div className="lg:hidden flex flex-col px-4 pt-2">
+          <details className="group border-b border-gray-300">
+            <summary className="flex items-center justify-between py-4 text-[16px] font-bold cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+              Conócenos <ChevronDown size={18} color="#17a54d" className="transition-transform group-open:rotate-180" />
+            </summary>
+            <div className="flex flex-col gap-3 pb-4 text-[14px]">
+              <a href="#" className="hover:text-[#17a54d]">App de Banco Azteca</a>
+              <a href="#" className="hover:text-[#17a54d]">Sobre Banco Azteca</a>
+              <a href="#" className="hover:text-[#17a54d]">Información financiera</a>
+              <a href="#" className="hover:text-[#17a54d]">Banca Empresarial Azteca</a>
+              <a href="#" className="hover:text-[#17a54d]">Afore</a>
+              <a href="#" className="hover:text-[#17a54d]">Uso de CoDi de Banco Azteca</a>
+              <a href="#" className="hover:text-[#17a54d]">Trabaja con nosotros</a>
+              <a href="#" className="hover:text-[#17a54d]">Grupo Salinas</a>
+              <a href="#" className="hover:text-[#17a54d]">Sostenibilidad</a>
+            </div>
+          </details>
+
+          <details className="group border-b border-gray-300">
+            <summary className="flex items-center justify-between py-4 text-[16px] font-bold cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+              Comunicación <ChevronDown size={18} color="#17a54d" className="transition-transform group-open:rotate-180" />
+            </summary>
+            <div className="flex flex-col gap-3 pb-4 text-[14px]">
+              <a href="#" className="hover:text-[#17a54d]">Noticias</a>
+              <a href="#" className="hover:text-[#17a54d]">Sala de prensa</a>
+              <a href="#" className="hover:text-[#17a54d]">Educación Financiera</a>
+            </div>
+          </details>
+
+          <details className="group border-b border-gray-300">
+            <summary className="flex items-center justify-between py-4 text-[16px] font-bold cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+              Contacto <ChevronDown size={18} color="#17a54d" className="transition-transform group-open:rotate-180" />
+            </summary>
+            <div className="flex flex-col gap-3 pb-4 text-[14px]">
+              <a href="#" className="hover:text-[#17a54d]">Contáctanos</a>
+              <a href="#" className="hover:text-[#17a54d]">Aclaraciones</a>
+              <a href="#" className="hover:text-[#17a54d]">Mapa de sucursales</a>
+              <a href="#" className="hover:text-[#17a54d]">Facturación</a>
+              <a href="#" className="hover:text-[#17a54d]">Cancelación de Banca Digital</a>
+            </div>
+          </details>
+
+          <details className="group border-b border-gray-300">
+            <summary className="flex items-center justify-between py-4 text-[16px] font-bold cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+              Legal <ChevronDown size={18} color="#17a54d" className="transition-transform group-open:rotate-180" />
+            </summary>
+            <div className="flex flex-col gap-3 pb-4 text-[14px]">
+              <a href="#" className="hover:text-[#17a54d]">Términos y condiciones</a>
+              <a href="#" className="hover:text-[#17a54d]">Aviso de privacidad</a>
+              <a href="#" className="hover:text-[#17a54d]">Avisos Legales - Repositorio Histórico</a>
+              <a href="#" className="hover:text-[#17a54d]">Ejerce tus derechos ARCO</a>
+              <a href="#" className="hover:text-[#17a54d]">Programa de ética, integridad y cumplimiento</a>
+              <a href="#" className="hover:text-[#17a54d]">Contratos</a>
+              <a href="#" className="hover:text-[#17a54d]">Buró de entidades financieras</a>
+              <a href="#" className="hover:text-[#17a54d]">Corresponsalías</a>
+              <a href="#" className="hover:text-[#17a54d]">Adhesión al Código global de conducta</a>
+              <a href="#" className="hover:text-[#17a54d]">Contrato de servicios financieros</a>
+              <a href="#" className="hover:text-[#17a54d]">Despachos de cobranza</a>
+            </div>
+          </details>
+
+          <div className="flex items-center justify-center gap-8 py-6">
+            <img src={grupoSalinas} alt="Grupo Salinas" className="h-12 w-auto" />
+            <img src={esrLogo} alt="Empresa Socialmente Responsable" className="h-12 w-auto" />
+          </div>
+        </div>
+
+        {/* ===== Links en escritorio ===== */}
+        <div className="hidden lg:flex w-full">
 
           {/* Columnas de links */}
           <div className="flex-1">
@@ -95,9 +164,9 @@ export function Footer() {
         </div>
 
         {/* Descarga la App */}
-        <div className="border-t border-gray-300 flex flex-col items-end px-10 py-6">
-          <p className="text-[20px] font-medium mb-4 pr-2">Descarga la App de Banco Azteca:</p>
-          <div className="flex gap-8">
+        <div className="border-t border-gray-300 flex flex-col items-center lg:items-end px-4 lg:px-10 py-6">
+          <p className="text-[17px] lg:text-[20px] font-medium mb-4 pr-0 lg:pr-2 text-center">Descarga la App de Banco Azteca:</p>
+          <div className="flex flex-wrap justify-center gap-4 lg:gap-8">
             <a href="#" className="flex items-center gap-2 bg-[#2e3032] text-white rounded-md px-4 py-2 hover:bg-black transition">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinejoin="round">
                 <path d="M4 3l16 9-16 9V3z" />
